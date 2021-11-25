@@ -10,13 +10,13 @@ public class CustomerDto {
 
     private String taxId;
 
-    private TaxIdType taxIdType;
+    private String taxIdType;
 
     public CustomerDto() {
 
     }
 
-    public CustomerDto(String name, String billingCountryCode, String taxId, TaxIdType taxIdType) {
+    public CustomerDto(String name, String billingCountryCode, String taxId, String taxIdType) {
         this.name = name;
         this.billingCountryCode = billingCountryCode;
         this.taxId = taxId;
@@ -53,12 +53,44 @@ public class CustomerDto {
         this.taxId = taxId;
     }
 
-    public TaxIdType getTaxIdType() {
+    public String getTaxIdType() {
         return taxIdType;
     }
 
-    public void setTaxIdType(TaxIdType taxIdType) {
+    public void setTaxIdType(String taxIdType) {
         this.taxIdType = taxIdType;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
+        CustomerDto that = (CustomerDto) o;
+
+        if (name != null ? !name.equals(that.name) : that.name != null) {
+            return false;
+        }
+        if (billingCountryCode != null ? !billingCountryCode.equals(that.billingCountryCode) : that.billingCountryCode != null) {
+            return false;
+        }
+        if (taxId != null ? !taxId.equals(that.taxId) : that.taxId != null) {
+            return false;
+        }
+        return taxIdType != null ? taxIdType.equals(that.taxIdType) : that.taxIdType == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = name != null ? name.hashCode() : 0;
+        result = 31 * result + (billingCountryCode != null ? billingCountryCode.hashCode() : 0);
+        result = 31 * result + (taxId != null ? taxId.hashCode() : 0);
+        result = 31 * result + (taxIdType != null ? taxIdType.hashCode() : 0);
+        return result;
     }
 
 }
