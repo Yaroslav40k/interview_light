@@ -8,14 +8,26 @@ A customer’s tax IDs display in the header of invoice and credit note PDFs.
 
 You’re responsible for making sure that customer information is accurate. Make sure that the Tax ID is correct.
 
-Imagine you have a flat file with all your customers :
-
+Imagine you have a JSON file coming to your application with customers data :
 ```
-name, billingCountryCode, taxId,
-Helen,  USA, 12-3456789
-John,  GBR, GB123456789
+[
+{
+"name": "Helen", 
+"billingCountryCode": "USA", 
+"taxId": "12-3456789"
+},
+{
+"name": "John",
+"billingCountryCode": "GBR",
+"taxId": "GB123456789"
+},
+{
+"name": "Tamia",
+"billingCountryCode": "IND",
+"taxId": "12ABCDE3456FGZH"
+}
+]
 ```
-
 And you want to select a proper Tax ID Type using 3 different patterns :
 
 ^((GB)?([0-9]{9}([0-9]{3})?|[A-Z]{2}[0-9]{3}))$  - for UNITED_KINGDOM  ids
