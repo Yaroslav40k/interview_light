@@ -34,9 +34,11 @@ And you want to select a proper Tax ID Type using 3 different patterns :
 ^([07][1-7]|1[0-6]|2[0-7]|[35][0-9]|[468][0-8]|9[0-589])-?\\d{7}$ - for UNITED_STATES  ids
 ^([0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1})$ - for INDIA ids
 
-
-Implement a solution that takes a bunch of customers (a file) as an input 
-and returns a list of customers with the selected Tax ID Type.
+Read the json file.
+Get the list of customers.
+Check if a Tax ID value is valid.
+Assign proper Tax ID Type to a customer.
+Return a list of updated customers.
 
 Remember, our customers can make mistakes in their Tax IDs!
 

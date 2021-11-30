@@ -1,4 +1,4 @@
-package com.andersen.interview.config;
+package com.andersen.interview.type;
 
 import java.util.HashMap;
 import java.util.Map;
