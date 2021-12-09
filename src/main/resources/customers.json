@@ -1,18 +1,17 @@
 [
   {
     "name": "Helen",
-    "billingCountryCode": "USA",
-    "taxId": "12-3456789"
+    "country": "USA",
+    "birthday": "1994-08-01"
   },
   {
     "name": "John",
-    "billingCountryCode": "GBR",
-    "taxId": "GB123456789"
+    "country": "GBR",
+    "birthday": "1998-02-22"
   },
-
   {
     "name": "Tamia",
-    "billingCountryCode": "IND",
-    "taxId": "12ABCDE3456FGZH"
+    "country": "IND",
+    "birthday": "1956-12-09"
   }
 ]
